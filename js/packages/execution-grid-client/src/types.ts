@@ -3,6 +3,7 @@ import {type Proxy} from '@applitools/req'
 export interface ECClient {
   readonly url: string
   readonly port: number
+  unref(): void
   close(): void
 }
 

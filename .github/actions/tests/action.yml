@@ -14,10 +14,6 @@ inputs:
   setup-type:
     description: type of the setup script
     type: string
-  remote:
-    description: remote type
-    type: string
-    default: local
   links:
     description: names of package directories to link before testing
     type: string
@@ -42,7 +38,6 @@ runs:
       shell: ${{inputs.shell}}
       working-directory: ${{inputs.working-directory}}
       env:
-        APPLITOOLS_TEST_REMOTE: ${{inputs.remote}}
         MOCHA_GREP: ${{inputs.grep}}
         MOCHA_JOBS: ${{inputs.jobs}}
       run: |

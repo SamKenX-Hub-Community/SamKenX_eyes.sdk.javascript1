@@ -98,10 +98,9 @@
     "test:coverage:cdp": "APPLITOOLS_WEBDRIVERIO_PROTOCOL=cdp yarn test:coverage",
     "report": "bongo report --name 'js_wdio_5'",
     "test:sanity": "echo 'create sanity suite'",
-    "setup": "yarn docker:setup && [ \"$APPLITOOLS_TEST_REMOTE\" = 'ec' ] && yarn ec:setup || echo 'no ec client'",
+    "setup": "yarn docker:setup",
     "docker:setup": "node ../../scripts/generate-docker-compose-config.js && docker-compose up -d",
     "docker:teardown": "docker-compose down",
-    "ec:setup": "ec-client --port 19012 &> /dev/null & echo 'APPLITOOLS_EC_URL=http://localhost:19012' >> ./.env",
     "upgrade:framework": "if [ ! -z $APPLITOOLS_WEBDRIVERIO_VERSION ]; then packagejson=`cat package.json`; NODE_VERSION=${NODE_VERSION:-$(node -v)} yarn upgrade --no-lockfile webdriverio@$APPLITOOLS_WEBDRIVERIO_VERSION @types/node@${NODE_VERSION%%.*}; echo \"$packagejson\" > package.json; fi",
     "deps": "bongo deps",
     "gh:test": "gh workflow run test.yml --ref $(git rev-parse --abbrev-ref HEAD) -f packages='wdio wdio(node:14) wdio(node:12) wdio(protocol:cdp) wdio(framework:6) wdio(framework:5)'",
@@ -114,13 +113,13 @@
   },
   "dependencies": {
     "@applitools/eyes": "1.0.0",
-    "@applitools/spec-driver-webdriverio": "1.4.30"
+    "@applitools/spec-driver-webdriverio": "1.4.31"
   },
   "devDependencies": {
-    "@applitools/api-extractor": "1.2.11",
-    "@applitools/bongo": "^2.2.5",
-    "@applitools/sdk-coverage-tests": "^2.7.12",
-    "@applitools/test-utils": "1.5.12",
+    "@applitools/api-extractor": "1.2.12",
+    "@applitools/bongo": "^3.0.1",
+    "@applitools/sdk-coverage-tests": "^3.0.0",
+    "@applitools/test-utils": "1.5.13",
     "@types/node": "^16.18.14",
     "@wdio/cli": "^8.3.9",
     "@wdio/dot-reporter": "^8.3.0",

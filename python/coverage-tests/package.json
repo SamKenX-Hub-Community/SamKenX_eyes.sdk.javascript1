@@ -30,8 +30,5 @@
     "@applitools/sdk-coverage-tests": "^3.0.0",
     "@typescript-eslint/parser": "^2.14.0",
     "typescript": "^3.7.4"
-  },
-  "devDependencies": {
-    "mocha": "^8.0.1"
   }
 }

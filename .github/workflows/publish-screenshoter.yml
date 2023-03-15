@@ -101,7 +101,6 @@ jobs:
           test-type: e2e:${{matrix.name}}
           setup-type: ${{matrix.name}}
           jobs: ${{matrix.jobs}}
-          remote: ${{matrix.remote}}
       - name: Upload testing artifacts
         if: always()
         uses: actions/upload-artifact@v3

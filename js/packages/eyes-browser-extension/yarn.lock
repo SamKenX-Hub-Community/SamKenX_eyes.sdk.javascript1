@@ -236,9 +236,13 @@
   resolved "https://registry.yarnpkg.com/@applitools/snippets/-/snippets-2.4.6.tgz#d23afdfa693fa5242733578fe065d1667ac23e2c"
   integrity sha512-hAsAalDxaa1w2RCEx2b35D9XJIGGRlqQKzXEE6/rNr5vMtT0eYye61SST5e2PD7B4F2jJ7jRKrZd7REawoxxmg==
 
-"@applitools/spec-driver-browser-extension@link:../spec-driver-browser-extension":
-  version "0.0.0"
-  uid ""
+"@applitools/spec-driver-browser-extension@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@applitools/spec-driver-browser-extension/-/spec-driver-browser-extension-1.0.0.tgz#dbe18a69cd5696c757eba84e9f8695530171d716"
+  integrity sha512-SYOVgfLxL8asXG+B+7uJj5VuyDljtjxSecgmJ1lqzs1lX9n4GkSCNRlL0If2vFzeW53S/t9QlRmjZVFw0O1OiA==
+  dependencies:
+    "@applitools/utils" "1.3.30"
+    webextension-polyfill "0.10.0"
 
 "@applitools/spec-driver-playwright@^1.3.4":
   version "1.3.4"
@@ -277,6 +281,11 @@
   version "1.3.13"
   resolved "https://registry.yarnpkg.com/@applitools/utils/-/utils-1.3.13.tgz#21bc8d1211ce9a72b47364e1131d89d51c557e87"
   integrity sha512-UwA1skl9kzK+WrXu7WyX6A4K4TdIFZbDAcFJq2PA5fhmbviAlk4iFJtQjyopYTdY0sSh3VRSsCPr3DsbFa79AA==
+
+"@applitools/utils@1.3.30":
+  version "1.3.30"
+  resolved "https://registry.yarnpkg.com/@applitools/utils/-/utils-1.3.30.tgz#458e7482bb459cb51ee55982057e09c527d8fc87"
+  integrity sha512-plOtxdUYLqMAYwevUTUFNYqSJIH0BQXeqlBFtKwdTdFGn6pK3cGBg5aYp40BxPodBKrQ6Ze325WnwhIVAI3pYg==
 
 "@azure/abort-controller@^1.0.0":
   version "1.1.0"
@@ -5440,10 +5449,10 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.72.1:
-  version "5.74.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.74.0.tgz#02a5dac19a17e0bb47093f2be67c695102a55980"
-  integrity sha512-A2InDwnhhGN4LYctJj6M1JEaGL7Luj6LOmyBHjcI8529cm5p6VXiTIW2sn6ffvEAKmveLzvu4jrihwXtPojlAA==
+webpack@^5.76.0:
+  version "5.76.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.76.0.tgz#f9fb9fb8c4a7dbdcd0d56a98e56b8a942ee2692c"
+  integrity sha512-l5sOdYBDunyf72HW8dF23rFtWq/7Zgvt/9ftMof71E/yUb1YLOBmTgA2K4vQthB3kotMrSj609txVE0dnr2fjA==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^0.0.51"
