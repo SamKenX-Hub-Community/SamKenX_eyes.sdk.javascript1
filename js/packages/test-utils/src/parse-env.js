@@ -375,7 +375,7 @@ const BROWSERS = {
   },
   chrome: {
     type: 'local',
-    url: process.env.APPLITOOLS_TEST_REMOTE === 'ec' ? process.env.APPLITOOLS_EC_URL : 'http://localhost:4444/wd/hub',
+    url: 'http://localhost:4444/wd/hub',
     capabilities: {
       browserName: 'chrome',
     },

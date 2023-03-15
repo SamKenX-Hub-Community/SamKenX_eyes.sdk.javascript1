@@ -99,13 +99,14 @@ export async function makeServer({settings, logger}: {settings: ECClientSettings
 
   server.listen({port: settings.port ?? 0, hostname: 'localhost'})
 
-  return new Promise<{url: string; port: number; close(): void}>((resolve, reject) => {
+  return new Promise<ECClient>((resolve, reject) => {
     server.on('listening', () => {
       const address = server.address() as AddressInfo
       serverLogger.log(`Proxy server has started on port ${address.port}`)
       resolve({
         url: `http://localhost:${address.port}`,
         port: address.port,
+        unref: () => server.unref(),
         close: () => server.close(),
       })
     })

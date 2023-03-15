@@ -15,7 +15,7 @@ on:
         type: string
         required: true
       test-type:
-        description: testing type (unit, it, e2e, coverage, sanity)
+        description: testing type (unit, it, e2e)
         type: string
         required: false
       build-type:
@@ -36,10 +36,6 @@ on:
       links:
         description: use packages from source
         required: false
-      link-dependencies:
-        description: use dependencies from source
-        type: boolean
-        default: false
 
 concurrency: 
   group: ${{github.event_name == 'pull_request' && github.ref || github.run_id }}
@@ -74,7 +70,7 @@ jobs:
           packages: ${{github.event.inputs.packages || (github.event_name == 'pull_request' && 'changed') || (github.event_name == 'schedule' && 'all')}}
           env: ${{github.event.inputs.env}}
           allow-variations: true
-          link-dependencies: ${{github.event.inputs.link-dependencies || github.event_name == 'pull_request' || github.event_name == 'schedule'}}
+          link-dependencies: ${{github.event.inputs.links == 'all' || github.event_name == 'pull_request' || github.event_name == 'schedule'}}
   test:
     needs: setup
     strategy:
@@ -116,7 +112,7 @@ jobs:
   report:
     name: Report
     needs: [test]
-    if: ${{always() && github.event_name == 'schedule'}}
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Check-out repository
@@ -129,7 +125,7 @@ jobs:
         with:
           path: ./artifact-*/report*.json
       - name: Send slack notification
-        if: always()
+        if: ${{always() && github.event_name == 'schedule'}}
         uses: slackapi/slack-github-action@v1.23.0
         with:
           payload: |

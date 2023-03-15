@@ -17,12 +17,12 @@ Apollo SDK:
   feature:
     - Added `Resize` value to `StitchMode` enum
   bug-fix:
-    - 
+    - Avoid handing process when using execution cloud
 "@applitools/eyes-webdriverio":
   feature:
     - 
   bug-fix:
-    - 
+    - Avoid handing process when using execution cloud
 "@applitools/eyes-playwright":
   feature:
     - 
@@ -55,7 +55,7 @@ Apollo SDK:
   feature:
     - Added `Resize` value to `StitchMode` enum
   bug-fix:
-    - 
+    - Avoid handing process when using execution cloud
 "@applitools/eyes-cypress":
   feature:
     - Crop screenshot image base on account info

@@ -67,6 +67,7 @@ export class Eyes<TSpec extends Core.SpecType = Core.SpecType> {
         capabilities: {eyesServerUrl: config?.serverUrl, apiKey: config?.apiKey},
       },
     })
+    client.unref()
     return client.url
   }
 
