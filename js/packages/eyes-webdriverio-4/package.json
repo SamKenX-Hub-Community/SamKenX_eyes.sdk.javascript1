@@ -60,7 +60,7 @@
     "@types/webdriverio": "4.13.3",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
-    "chromedriver": "^85.0.0",
+    "chromedriver": "^119.0.1",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
