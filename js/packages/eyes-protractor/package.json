@@ -82,7 +82,7 @@
     "@types/node": "12",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
-    "chromedriver": "^101.0.0",
+    "chromedriver": "^119.0.1",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
