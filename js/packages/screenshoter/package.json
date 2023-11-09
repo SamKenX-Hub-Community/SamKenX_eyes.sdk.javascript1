@@ -80,7 +80,7 @@
     "@applitools/spec-driver-webdriverio": "^1.4.31",
     "@applitools/test-utils": "^1.5.13",
     "appium": "^1.22.3",
-    "chromedriver": "^101.0.0",
+    "chromedriver": "^119.0.1",
     "eslint": "^8.16.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
     "eslint-plugin-node": "^11.1.0",
