@@ -78,7 +78,7 @@
     "@applitools/test-utils": "1.5.12",
     "@types/nightwatch": "^2.3.16",
     "@types/node": "^12.20.55",
-    "chromedriver": "^110.0.0",
+    "chromedriver": "^119.0.1",
     "cucumber": "6.0.7",
     "geckodriver": "^3.0.1",
     "nightwatch": "^2.5.4",
